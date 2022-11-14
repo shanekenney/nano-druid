@@ -10,5 +10,7 @@ RUN yum install -y perl
 
 COPY --from=build /apache-druid-24.0.0 /apache-druid-24.0.0
 
+EXPOSE 8888
+
 ENTRYPOINT apache-druid-24.0.0/bin/start-nano-quickstart
 
